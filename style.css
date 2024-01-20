@@ -1,0 +1,1417 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Lexend", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #086f77;
+    align-content: flex-start;
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    width: 8in;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0004;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+h1 {
+    margin-top: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 8.25in;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 4px 0px 4px #0004;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #666;
+    color: #eee;
+    height: 0vh;
+}
+
+nav {
+    box-shadow: -4px 0px 4px #0003;
+    width: 8.25in;
+    margin: 0 auto;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.prehead {
+    display: flex;
+    justify-content: space-between;
+    width: 8in;
+    border-top: 1px solid #0004;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.info {}
+
+blockquote {
+    margin-left: 2rem;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.address {
+    padding: 0 1rem;
+    
+    
+}
+
+.address blockquote p {
+    margin-top: 0.5rem;
+}
+
+.address label {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+table.lineitems {
+    width: 8in;
+    border-collapse: collapse;
+    border: 1px solid #0003;
+}
+
+table.tally label {
+    width: 15rem;
+}
+
+table.lineitems td {
+    border-bottom: 1px solid #0003;
+    vertical-align: top;
+}
+.sl{
+    text-align: center;
+}
+table.tally {
+    border-collapse: collapse;
+    width: 2in;
+    float: right;
+}
+
+table.tally td {
+    border-bottom: 1px solid #0000;
+}
+
+table.lineitems td {
+    padding: 0.25rem;
+    height: 2rem;
+}
+
+table.lineitems>tbody>tr:nth-child(2n)>td {
+    background-color: #eee;
+}
+
+table.lineitems>tbody>tr>td:nth-child(3) {
+    text-align: center;
+}
+
+table.lineitems thead th {
+    border-bottom: 1px solid #0003;
+    border-top: 1px solid #0003;
+    background: #333;
+    color: #eee;
+    font-weight: 300;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00c;
+    text-decoration: underline;
+}
+
+[contenteditable=""] {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #0003;
+}
+
+.print [contenteditable=""] {
+    border: 0px;
+}
+
+[contenteditable=""]:hover,
+[contenteditable="true"]:hover {
+    background-color: #fff;
+    outline: 1px solid #08c9;
+}
+
+[contenteditable=""]:before {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: "edit me!";
+    background: #333;
+    color: #fff;
+    height: 0rem;
+    width: 5rem;
+    top: 0rem;
+    overflow: hidden;
+    transition: all 200ms linear;
+}
+
+[contenteditable=""]:hover:before {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: "edit me!";
+    background: #333;
+    color: #fff;
+    height: 2rem;
+    width: 5rem;
+    top: -2rem;
+}
+
+table.lineitems tr td[contenteditable=""],
+span[contenteditable=""] {
+    background-color: #fff;
+    border-bottom: 1px solid #0006;
+}
+
+tr {
+    position: relative;
+}
+
+.print input {
+    border: 0px;
+}
+
+.print #lastrow {
+    display: none;
+}
+
+select {
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    padding: 0.5rem;
+    color: #333;
+}
+
+option {
+    margin-top: 0.5rem;
+}
+
+option[SELECTED=true] {
+    background-color: #9cf;
+}
+
+#to input {
+    width: 15rem;
+}
+
+input,
+#invoice_id {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px dashed #000a;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Lexend", sans-serif;
+}
+
+#date {
+    width: 8rem;
+}
+
+#invoice_id {
+    width: 8rem;
+    padding-left: 1rem;
+    display: inline-block;
+}
+
+input:hover,
+input:focus {
+    background-color: #ff03;
+}
+
+blockquote#to>label {
+    width: 2rem;
+    color: #919191;
+    display: inline-block;
+    text-align: center;
+}
+
+.toolbar {
+    text-align: right;
+    background: #35363a;
+    height: 3rem;
+    color: #ddd;
+}
+
+#invoices {
+    width: 100%;
+}
+
+dialog {
+
+}
+
+dialog#helpDialog {
+    width: 40rem;
+    padding: 1rem;
+    margin: 0 auto;
+    top: 10vh;
+    padding: 0px;
+}
+
+dialog#helpDialog p {
+    margin-bottom: 1rem;
+    min-height: 20rem;
+}
+
+dialog#helpDialog h2 {
+    margin-bottom: 1rem;
+}
+
+dialog#helpDialog form {
+    padding: 0;
+}
+
+dialog#helpDialog .helpBody {
+    padding: 1rem;
+    display: none;
+}
+
+dialog#helpDialog .helpBody.viewing {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+  }
+.titlebar {
+    padding: 0.5rem 0.25rem;
+}
+dialog#importDialog {
+    width: 30rem;
+    padding: 1rem;
+    margin: 0 auto;
+    top: 10vh;
+}
+
+dialog#importDialog p {
+    margin-bottom: 1rem;
+}
+
+dialog#importDialog h2 {
+    margin-bottom: 1rem;
+}
+
+dialog::backdrop {
+    background-color: #0009;
+}
+
+@media only screen and (max-width:450px) {
+    body {
+        flex-direction: column;
+    }
+    main {
+        flex-direction: column;
+        width: 100vw;
+        height: 90vh;
+    }
+    .toolbar {
+        height: 10vh;
+        width: 100vw;
+    }
+    #invoices {
+        height: 3rem;
+    }
+}
+button.smBtn {
+    border: 0px;
+    height: 16px;
+    width: 16px;
+}
+
+button.btn {
+    height: 5vh;
+    width: 5vh;
+    background-color: transparent;
+    font-size: 12px;
+    padding-top: 26px;
+    border: none;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: all 50ms linear;
+    position: relative;
+    top: 0px;
+    transform: scale(1);
+}
+
+button:hover {
+}
+
+button:active {
+    position: relative;
+    filter: sepia(1) saturate(5);
+    transform: scale(0.95) ;
+}
+
+button#importBtn {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="189px" height="214px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M27.876,187.275 C28.015,187.415 28.154,187.554 28.293,187.694 C72.564,187.694 116.848,187.694 161.118,187.694 C161.118,169.984 161.118,152.268 161.118,134.558 C161.257,134.419 161.397,134.279 161.536,134.140 C170.446,134.140 179.358,134.140 188.268,134.140 C188.412,147.598 188.100,181.624 188.100,189.533 C188.100,197.442 181.585,204.011 181.585,204.011 C181.585,204.011 177.874,214.030 162.539,213.995 C126.914,213.915 36.505,213.691 26.789,213.691 C17.073,213.691 9.080,206.103 9.080,206.103 C9.080,206.103 1.413,195.932 1.413,189.030 C1.413,182.128 -0.000,134.000 -0.000,134.000 L27.000,134.000 "/><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M95.211,154.015 L163.000,74.817 L112.158,74.817 L112.158,0.000 L73.421,0.000 L73.421,74.817 L25.000,74.817 L95.211,154.015 Z"/></svg>');
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+button#exportBtn {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="218px" height="219px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M153.750,75.007 C98.397,74.327 99.955,83.332 68.226,106.970 C67.693,68.739 100.646,42.631 112.052,37.077 C124.544,30.994 143.114,32.247 153.750,31.963 C153.750,21.310 153.750,10.653 153.750,-0.000 C154.176,0.142 154.601,0.284 155.027,0.426 C176.016,18.040 197.011,35.658 218.000,53.272 C218.000,53.556 218.000,53.840 218.000,54.124 C196.586,71.737 175.165,89.356 153.750,106.970 C153.750,96.316 153.750,85.660 153.750,75.007 ZM27.378,54.976 C27.378,54.976 27.378,146.608 27.378,191.778 C27.520,191.920 27.662,192.062 27.803,192.204 C72.901,192.204 118.013,192.204 163.111,192.204 C163.111,174.165 163.111,156.120 163.111,138.080 C163.253,137.938 163.395,137.796 163.537,137.654 C172.613,137.654 181.692,137.654 190.768,137.654 C190.915,151.363 190.597,186.022 190.597,194.078 C190.597,202.134 183.960,208.825 183.960,208.825 C183.960,208.825 180.180,219.030 164.558,218.995 C128.267,218.914 36.169,218.685 26.271,218.685 C16.373,218.685 8.231,210.956 8.231,210.956 C8.231,210.956 0.421,200.596 0.421,193.565 C0.421,186.535 0.146,80.973 0.146,80.973 C0.146,80.973 -0.365,62.549 0.450,54.397 C1.058,48.314 2.405,42.984 5.252,39.208 C9.762,33.229 16.727,28.008 26.144,28.008 C35.562,28.008 54.610,28.554 54.610,28.554 L55.035,28.980 L54.610,54.550 L27.378,54.976 Z"/></svg>');
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+button#delBtn {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="179px" height="214px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M129.284,23.093 C145.804,22.858 172.598,18.887 177.700,31.227 C179.668,35.989 178.841,44.768 178.746,51.171 C119.170,51.171 59.576,51.171 0.000,51.171 C0.174,44.786 0.349,38.400 0.523,32.015 C5.295,18.877 31.898,22.616 49.201,22.830 C48.787,-0.584 66.057,0.000 89.242,-0.000 C112.668,-0.000 129.704,-0.647 129.284,23.093 ZM62.810,23.093 C80.517,23.005 98.229,22.918 115.937,22.830 C116.010,18.771 115.268,15.630 112.796,14.170 C110.314,12.705 69.267,12.353 66.212,13.908 C63.283,15.399 62.672,18.418 62.810,23.093 ZM7.590,60.356 C62.107,60.443 116.640,60.531 171.157,60.618 C165.836,97.965 160.514,135.323 155.193,172.670 C153.407,183.038 153.649,205.093 148.912,212.557 C143.308,214.805 132.437,213.344 125.358,213.344 C103.290,213.344 81.214,213.344 59.146,213.344 C50.506,213.344 35.198,215.492 29.050,212.032 C21.897,161.478 14.742,110.909 7.590,60.356 ZM88.981,84.760 C86.205,85.816 83.934,86.455 82.961,89.221 C82.874,114.411 82.787,139.608 82.700,164.797 C82.699,173.678 80.237,188.464 88.719,188.939 C98.393,189.482 95.786,175.392 95.785,166.372 C95.698,140.570 95.611,114.761 95.523,88.959 C94.539,86.419 92.169,85.163 88.981,84.760 ZM46.846,85.023 C44.353,86.172 42.149,86.969 41.350,89.746 C43.531,115.635 45.712,141.532 47.893,167.421 C48.907,174.993 46.718,190.540 56.791,188.677 C64.694,187.215 62.065,174.151 60.978,166.109 C58.623,140.395 56.267,114.673 53.912,88.959 C52.809,86.428 50.451,85.144 46.846,85.023 ZM129.545,85.023 C127.250,86.183 125.062,87.110 124.311,89.746 C122.131,114.411 119.949,139.083 117.769,163.747 C116.640,171.994 113.689,187.295 121.956,188.677 C131.859,190.332 129.599,175.576 130.592,167.946 C132.511,146.955 134.431,125.957 136.350,104.966 C137.551,95.980 139.770,85.101 129.545,85.023 Z"/></svg>');
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+button#newBtn {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211px" height="217px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M80.000,-0.000 L130.000,-0.000 L130.000,83.000 L211.000,83.000 L211.000,133.000 L130.000,133.000 L130.000,217.000 L80.000,217.000 L80.000,133.000 L-0.000,133.000 L-0.000,83.000 L80.000,83.000 L80.000,-0.000 Z"/></svg>');
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+button#archiveBtn {
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226px" height="198px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M218.302,0.038 C222.626,1.933 222.667,2.079 225.655,4.945 C226.136,12.273 226.064,25.392 225.655,36.840 C224.430,37.249 223.204,40.111 221.979,40.520 C148.453,40.520 4.554,40.844 1.379,40.520 C-1.056,39.662 0.562,38.066 0.153,36.840 C0.153,33.573 0.341,9.251 0.153,4.945 C-0.174,0.211 8.910,0.218 11.183,0.038 C13.456,-0.141 163.566,0.447 218.302,0.038 ZM16.085,49.107 C81.442,49.516 146.818,49.925 212.174,50.334 C212.174,94.900 212.174,139.480 212.174,184.046 C208.774,188.648 207.014,194.246 201.144,196.313 C156.212,196.722 111.266,197.131 66.333,197.540 C47.288,197.540 22.052,201.181 16.085,187.726 C11.197,179.892 13.634,160.451 13.634,148.471 C13.634,115.762 13.634,83.043 13.634,50.334 C14.451,49.925 15.268,49.516 16.085,49.107 ZM76.138,72.415 C72.785,77.192 71.249,79.346 71.235,88.362 C68.900,98.062 126.340,93.536 149.671,93.269 C154.844,92.418 157.586,82.936 153.348,74.868 C155.056,70.003 99.469,72.148 76.138,72.415 Z"/></svg>');
+}
+
+button#saveBtn {
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232px" height="232px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M119.312,0.000 C127.539,0.000 135.769,0.000 143.996,0.000 C145.040,3.162 144.264,8.608 144.264,12.318 C144.264,21.332 144.264,30.350 144.264,39.364 C143.795,40.126 144.082,41.365 143.728,42.310 C143.129,43.903 141.559,46.440 140.240,47.397 C138.727,48.495 136.666,49.331 134.605,49.808 C131.905,50.432 128.217,49.631 126.556,49.004 C116.104,45.063 119.043,30.885 119.044,17.138 C119.044,12.868 118.191,3.325 119.312,0.000 ZM51.431,0.268 C51.431,21.510 51.431,42.758 51.431,64.000 C94.534,64.000 137.650,64.000 180.754,64.000 C180.754,42.758 180.754,21.510 180.754,0.268 C183.526,0.268 186.299,0.268 189.071,0.268 C203.379,14.280 217.692,28.297 232.000,42.310 C232.000,101.394 232.000,160.497 232.000,219.582 C231.464,220.389 231.603,221.559 231.195,222.527 C229.821,225.791 226.907,229.159 223.683,230.561 C218.287,232.906 205.609,231.632 198.194,231.632 C179.146,231.632 160.092,231.632 141.045,231.632 C106.794,231.632 72.534,231.632 38.284,231.632 C21.581,231.632 6.139,234.823 0.989,222.527 C-0.579,218.782 0.184,212.002 0.184,206.996 C0.184,195.929 0.184,184.858 0.184,173.791 C0.184,135.234 0.184,96.666 0.184,58.109 C0.184,46.952 0.184,35.792 0.184,24.636 C0.184,16.088 -0.240,10.246 3.404,5.356 C7.194,0.270 14.216,0.268 23.259,0.268 C32.648,0.268 42.041,0.268 51.431,0.268 ZM34.259,102.025 C31.705,103.814 29.449,103.650 28.088,106.845 C26.640,110.245 27.552,116.933 27.552,121.305 C27.552,132.283 27.552,143.265 27.552,154.243 C27.552,168.880 27.552,183.522 27.552,198.159 C27.552,205.317 26.706,212.465 31.040,215.297 C33.678,217.022 38.498,216.636 42.845,216.636 C51.251,216.636 59.660,216.636 68.066,216.636 C100.259,216.636 132.462,216.636 164.655,216.636 C172.704,216.636 180.755,216.636 188.803,216.636 C196.016,216.636 201.185,216.817 203.828,212.351 C205.473,209.573 204.633,203.073 204.633,198.962 C204.633,188.252 204.633,177.539 204.633,166.828 C204.633,151.566 204.633,136.300 204.633,121.038 C204.633,114.706 205.627,106.623 201.950,103.900 C198.837,101.594 193.242,102.025 187.730,102.025 C177.356,102.025 166.980,102.025 156.606,102.025 C115.828,102.025 75.037,102.025 34.259,102.025 ZM58.675,122.912 C90.064,122.912 121.461,122.912 152.850,122.912 C162.883,122.912 176.544,120.587 179.681,127.732 C180.079,128.640 180.888,130.042 180.485,131.749 C179.855,134.420 178.044,137.018 175.656,137.908 C173.634,138.662 170.099,138.176 167.607,138.176 C161.794,138.176 155.980,138.176 150.167,138.176 C128.258,138.176 106.342,138.176 84.432,138.176 C78.083,138.176 71.732,138.176 65.383,138.176 C62.685,138.176 58.733,138.741 56.529,137.908 C52.724,136.470 50.021,130.367 53.041,126.126 C54.569,123.978 56.530,124.274 58.675,122.912 ZM58.407,151.565 C89.974,151.565 121.551,151.565 153.118,151.565 C158.592,151.565 173.037,150.565 176.461,152.368 C178.011,153.185 178.868,154.758 179.681,156.385 C180.132,157.289 180.924,158.926 180.485,160.669 C179.831,163.270 177.977,165.624 175.656,166.561 C173.779,167.318 170.240,166.829 167.875,166.828 C161.973,166.828 156.069,166.828 150.167,166.828 C119.226,166.828 88.275,166.828 57.333,166.828 C52.943,165.599 49.834,159.497 53.041,154.778 C54.344,152.859 56.430,152.867 58.407,151.565 ZM57.602,180.485 C89.348,180.485 121.104,180.485 152.850,180.485 C158.037,180.485 163.225,180.485 168.412,180.485 C170.686,180.485 173.831,180.065 175.656,180.753 C178.021,181.645 181.515,185.230 180.485,189.322 C179.929,191.534 178.281,193.995 176.461,194.946 C174.390,196.028 170.958,195.749 167.875,195.749 C161.973,195.749 156.069,195.749 150.167,195.749 C128.615,195.749 107.057,195.749 85.505,195.749 C79.067,195.749 72.626,195.749 66.187,195.749 C63.348,195.749 59.434,196.296 57.065,195.481 C54.085,194.456 50.211,190.271 51.967,185.573 C52.885,183.119 54.818,182.369 56.529,180.753 C57.153,180.701 57.287,180.702 57.602,180.485 Z"/></svg>');
+}
+
+button#printBtn {
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="241px" height="191px"><path fill-rule="evenodd" fill="rgb(200, 200, 200)" d="M52.228,-0.000 C97.738,-0.000 143.262,-0.000 188.772,-0.000 C188.772,13.413 188.772,26.829 188.772,40.242 C199.397,40.242 210.026,40.242 220.652,40.242 C228.830,40.242 235.034,40.088 238.397,44.747 C242.011,49.755 240.803,60.895 240.803,69.373 C240.803,88.691 240.803,108.015 240.803,127.333 C240.803,137.363 241.806,146.876 235.991,151.058 C232.265,153.737 226.287,153.461 219.750,153.461 C209.425,153.461 199.097,153.461 188.772,153.461 C188.772,165.973 188.772,178.488 188.772,191.000 C143.262,191.000 97.738,191.000 52.228,191.000 C52.228,178.488 52.228,165.973 52.228,153.461 C41.903,153.461 31.575,153.461 21.250,153.461 C14.716,153.461 8.731,153.740 5.009,151.058 C-0.803,146.870 0.197,137.368 0.197,127.333 C0.197,108.015 0.197,88.691 0.197,69.373 C0.197,60.900 -1.014,49.749 2.603,44.747 C5.964,40.100 12.183,40.242 20.348,40.242 C30.974,40.242 41.603,40.242 52.228,40.242 C52.228,26.829 52.228,13.413 52.228,-0.000 ZM63.958,11.712 C63.958,21.121 63.958,30.533 63.958,39.942 C66.792,40.871 71.682,40.242 75.086,40.242 C82.905,40.242 90.726,40.242 98.545,40.242 C124.608,40.242 150.679,40.242 176.741,40.242 C176.842,40.142 176.942,40.042 177.042,39.942 C177.042,30.533 177.042,21.121 177.042,11.712 C139.351,11.712 101.649,11.712 63.958,11.712 ZM211.328,57.660 C210.380,58.541 209.413,58.659 208.922,60.063 C207.826,61.524 207.836,68.510 208.922,69.973 C209.354,71.327 210.174,71.515 211.028,72.376 C214.712,72.421 219.069,72.487 221.855,71.775 C223.753,68.665 223.758,63.678 222.757,59.462 C219.302,57.182 216.998,57.606 211.328,57.660 ZM63.958,112.618 C63.958,134.839 63.958,157.067 63.958,179.288 C101.649,179.288 139.351,179.288 177.042,179.288 C177.042,157.067 177.042,134.839 177.042,112.618 C139.351,112.618 101.649,112.618 63.958,112.618 ZM78.394,127.033 C106.462,127.033 134.538,127.033 162.606,127.033 C162.363,130.568 162.596,133.681 162.606,138.445 C160.648,139.087 157.257,138.745 154.786,138.745 C148.772,138.745 142.755,138.745 136.741,138.745 C117.394,138.745 98.042,138.745 78.695,138.745 C77.703,135.789 78.369,130.574 78.394,127.033 ZM78.394,153.160 C106.462,153.160 134.538,153.160 162.606,153.160 C162.606,157.064 162.606,160.969 162.606,164.873 C134.538,164.873 106.462,164.873 78.394,164.873 C78.394,160.969 78.394,157.064 78.394,153.160 Z"/></svg>');
+}
+button#helpBtn {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170px" height="229px"> <path fill-rule="evenodd"  fill="rgb(200, 200, 200)" d="M64.535,167.430 C64.535,139.017 65.811,128.161 86.773,113.267 C98.195,105.149 105.071,100.049 105.071,87.914 C105.071,64.828 94.740,60.585 82.345,60.585 C65.811,60.585 57.529,71.844 56.368,82.784 L56.368,83.079 L0.974,83.079 C0.974,31.581 53.416,0.012 85.591,0.012 C120.909,0.012 169.026,18.856 169.026,76.865 C169.026,100.837 163.909,118.990 141.181,135.267 C128.488,144.443 123.177,146.119 123.177,167.430 L64.535,167.430 ZM124.161,228.988 L65.323,228.988 L65.323,187.257 L124.161,187.257 L124.161,228.988 Z"/></svg>');
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.helpIcon {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170px" height="229px"> <path fill-rule="evenodd"  fill="rgb(255,255,0,128)" d="M64.535,167.430 C64.535,139.017 65.811,128.161 86.773,113.267 C98.195,105.149 105.071,100.049 105.071,87.914 C105.071,64.828 94.740,60.585 82.345,60.585 C65.811,60.585 57.529,71.844 56.368,82.784 L56.368,83.079 L0.974,83.079 C0.974,31.581 53.416,0.012 85.591,0.012 C120.909,0.012 169.026,18.856 169.026,76.865 C169.026,100.837 163.909,118.990 141.181,135.267 C128.488,144.443 123.177,146.119 123.177,167.430 L64.535,167.430 ZM124.161,228.988 L65.323,228.988 L65.323,187.257 L124.161,187.257 L124.161,228.988 Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #900;
+}
+.closeIcon {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230px" height="230px"> <path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M221.251,67.681 C251.702,157.248 198.173,219.397 131.141,228.825 C41.186,241.477 -22.970,150.178 7.777,73.052 C19.901,42.641 58.474,0.575 110.759,0.000 C163.045,-0.575 200.843,23.827 221.251,67.681 ZM77.505,55.863 L56.050,77.349 L93.596,113.875 L56.050,151.476 L76.432,174.036 L115.050,136.436 L153.669,174.036 L175.123,152.550 L136.505,114.950 L175.123,76.275 L153.669,53.715 L115.050,93.464 L77.505,55.863 Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: right;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    transition: all 70ms linear;
+    position: relative;
+    top: 0px;
+}
+.rowEditWrap {
+    width: 0px;
+    position: absolute;
+    transition: all 100ms linear;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.lineitem:hover .rowEditWrap {
+    width: 2rem;
+}
+.editBtn {
+    white-space: nowrap;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.47px" height="16.47px"><path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="0.313px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(0, 0, 0)" d="M10.901,0.526 C10.901,0.526 11.875,0.250 12.701,0.526 C13.527,0.802 14.756,2.293 15.101,2.929 C15.471,3.612 15.101,4.732 15.101,4.732 L14.501,5.332 L10.301,1.127 L10.901,0.526 ZM7.001,11.040 L4.901,11.040 L4.901,8.937 L2.802,8.937 L2.502,8.937 L9.701,1.728 L13.901,6.234 L7.001,13.143 L7.001,11.040 ZM1.302,11.941 L2.502,11.941 L4.601,14.344 L0.402,15.546 L0.402,14.945 L1.302,11.941 Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transition: all 70ms linear;
+    position: relative;
+    top: 0px;
+}
+.rmBtn {
+    white-space: nowrap;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="16px"><path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M6.045,1.547 C6.045,1.533 6.045,1.519 6.045,1.505 C5.919,1.508 5.949,1.572 5.876,1.604 C5.799,1.638 5.652,1.653 5.580,1.674 C5.207,1.783 4.824,1.827 4.466,1.929 C4.192,2.006 4.070,1.957 3.887,2.141 C3.885,2.397 4.020,2.591 3.986,2.804 C3.829,2.891 3.555,2.954 3.337,2.960 C3.263,2.837 3.257,2.669 3.210,2.508 C3.176,2.390 3.140,2.246 3.112,2.126 C3.069,1.942 3.164,1.767 3.225,1.674 C3.462,1.311 3.746,1.372 4.198,1.237 C4.713,1.083 5.260,1.019 5.791,0.869 C6.060,0.794 6.371,0.734 6.638,0.658 C6.689,0.653 6.741,0.648 6.793,0.643 C6.978,0.589 7.255,0.511 7.470,0.601 C7.666,0.683 7.827,0.868 7.893,1.081 C7.928,1.198 7.915,1.289 7.949,1.406 C7.990,1.544 8.062,1.729 8.034,1.886 C7.830,1.936 7.627,2.020 7.385,2.028 C7.359,1.986 7.346,1.987 7.343,1.915 C7.300,1.750 7.258,1.585 7.216,1.420 C7.181,1.398 7.133,1.365 7.103,1.335 C6.715,1.330 6.420,1.529 6.045,1.547 ZM10.770,1.618 C11.405,1.616 11.697,1.846 11.842,2.324 C11.948,2.676 11.988,3.074 11.686,3.242 C11.499,3.347 11.178,3.348 10.953,3.412 C10.355,3.580 9.717,3.662 9.106,3.835 C8.566,3.989 8.000,4.064 7.441,4.217 C5.955,4.622 4.386,4.859 2.900,5.276 C2.231,5.464 1.538,5.556 0.883,5.742 C0.554,5.836 0.299,5.676 0.206,5.446 C0.158,5.325 0.139,5.163 0.108,5.050 C0.023,4.741 0.152,4.450 0.263,4.287 C0.324,4.197 0.385,4.107 0.474,4.047 C0.666,3.919 0.908,3.908 1.165,3.835 C1.584,3.717 2.026,3.658 2.463,3.539 C3.824,3.168 5.268,2.953 6.623,2.564 C6.784,2.518 6.917,2.524 7.075,2.480 C7.465,2.369 7.897,2.292 8.288,2.183 C8.902,2.011 9.536,1.927 10.135,1.759 C10.297,1.714 10.655,1.695 10.770,1.618 ZM7.667,5.234 C8.598,5.234 9.529,5.234 10.459,5.234 C10.886,5.234 11.355,5.169 11.531,5.431 C11.643,5.597 11.578,5.882 11.531,6.081 C11.498,6.224 11.523,6.334 11.489,6.477 C11.447,6.651 11.451,6.850 11.404,7.042 C11.215,7.823 11.208,8.688 11.024,9.471 C10.968,9.707 10.995,9.926 10.939,10.163 C10.732,11.031 10.721,11.990 10.516,12.861 C10.456,13.113 10.461,13.375 10.403,13.609 C10.272,14.143 10.368,14.767 9.994,15.050 C9.952,15.097 9.909,15.144 9.867,15.191 C9.512,15.427 8.985,15.346 8.429,15.346 C7.437,15.346 6.445,15.346 5.453,15.346 C4.832,15.346 4.212,15.346 3.591,15.346 C3.164,15.346 2.774,15.358 2.519,15.191 C1.943,14.814 2.105,14.076 1.927,13.327 C1.763,12.636 1.751,11.870 1.589,11.180 C1.522,10.898 1.525,10.609 1.462,10.346 C1.457,10.276 1.452,10.205 1.448,10.135 C1.401,9.938 1.382,9.692 1.335,9.499 C1.330,9.428 1.325,9.358 1.321,9.287 C1.250,9.000 1.235,8.655 1.165,8.369 C1.131,8.226 1.156,8.116 1.123,7.974 C1.027,7.559 1.006,7.089 0.912,6.674 C0.860,6.448 0.985,6.240 1.095,6.166 C1.210,6.088 1.370,6.118 1.532,6.081 C1.794,6.021 2.103,6.014 2.364,5.954 C2.439,5.949 2.515,5.945 2.590,5.940 C2.883,5.870 3.214,5.886 3.521,5.813 C3.683,5.774 3.863,5.784 4.043,5.742 C4.740,5.581 5.514,5.592 6.214,5.431 C6.589,5.345 6.984,5.360 7.343,5.276 C7.453,5.250 7.585,5.287 7.667,5.234 ZM6.130,6.604 C6.090,6.630 6.042,6.613 5.989,6.632 C5.888,6.668 5.759,6.770 5.707,6.858 C5.634,6.980 5.650,7.189 5.650,7.380 C5.650,7.743 5.650,8.106 5.650,8.468 C5.650,9.692 5.650,10.916 5.650,12.140 C5.650,12.456 5.650,12.771 5.650,13.087 C5.650,13.267 5.639,13.453 5.707,13.567 C5.778,13.687 5.881,13.746 6.031,13.793 C6.085,13.809 6.195,13.843 6.285,13.821 C6.448,13.781 6.590,13.694 6.666,13.567 C6.733,13.453 6.722,13.266 6.722,13.087 C6.722,12.781 6.722,12.474 6.722,12.168 C6.722,10.789 6.722,9.409 6.722,8.030 C6.722,7.309 6.875,6.606 6.130,6.604 ZM3.055,6.632 C2.934,6.714 2.784,6.711 2.703,6.830 C2.556,7.044 2.625,7.427 2.689,7.705 C2.733,7.898 2.700,8.067 2.745,8.256 C2.811,8.534 2.791,8.838 2.858,9.132 C2.905,9.340 2.891,9.571 2.942,9.796 C3.077,10.378 3.062,11.036 3.196,11.618 C3.241,11.812 3.226,12.005 3.267,12.183 C3.378,12.659 3.278,13.462 3.619,13.694 C3.707,13.753 3.870,13.841 4.057,13.793 C4.591,13.655 4.504,13.110 4.381,12.578 C4.344,12.417 4.375,12.286 4.339,12.126 C4.291,11.917 4.306,11.690 4.254,11.462 C4.073,10.674 4.098,9.779 3.916,8.991 C3.911,8.911 3.906,8.831 3.902,8.750 C3.848,8.524 3.841,8.242 3.789,8.016 C3.640,7.370 3.884,6.620 3.055,6.632 ZM9.120,6.632 C9.080,6.660 9.028,6.653 8.979,6.674 C8.889,6.714 8.783,6.815 8.739,6.900 C8.657,7.058 8.701,7.266 8.654,7.465 C8.583,7.771 8.602,8.118 8.527,8.440 C8.367,9.132 8.394,9.907 8.231,10.601 C8.179,10.822 8.195,11.046 8.147,11.250 C8.077,11.545 8.101,11.849 8.034,12.126 C8.020,12.272 8.006,12.418 7.991,12.564 C7.959,12.675 7.972,12.840 7.935,13.002 C7.838,13.431 7.951,13.697 8.316,13.793 C8.411,13.818 8.556,13.786 8.612,13.764 C9.107,13.576 8.940,13.044 9.063,12.507 C9.101,12.249 9.138,11.990 9.176,11.731 C9.176,11.674 9.176,11.618 9.176,11.561 C9.328,10.878 9.329,9.973 9.500,9.245 C9.569,8.951 9.545,8.646 9.613,8.369 C9.623,8.261 9.632,8.153 9.641,8.044 C9.683,7.866 9.668,7.676 9.712,7.479 C9.736,7.372 9.797,7.163 9.754,7.013 C9.731,6.933 9.637,6.763 9.571,6.717 C9.473,6.640 9.288,6.631 9.120,6.632 Z"/></svg>');
+background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transition: all 70ms linear;
+    position: relative;
+    top: 0px;
+}
+.rmBtn:hover, .editBtn {
+    transform: scale(1.1);
+}
+.closeIcon:hover {
+    transform: scale(1.05);
+}
+.closeIcon:active {
+    transform: scale(0.95);
+    background-color: #f00;
+}
+.icon {
+    display: inline-block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    padding: 4px;
+    margin: 4px;
+    border: 3px solid #900;
+    outline: 2px solid #fff;
+    margin-right: 0.5rem;
+}
+.titlebar .icon {
+    float: left;
+}
+.titlebar {
+    background: #03c;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+#editrow input {
+    background-color: #ffc;
+    font-size: 14px;
+    width:100%;
+}
+#newrow input {
+    font-size: 14px;
+    background-color: #ffc;
+}
+.toolbar {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btngroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    text-shadow: 1px 1px 0px #0006;
+    font-size: 9px;
+    border-radius: 6px;
+}
+.btngroup:hover {
+    background-color: #666;
+}
+input#item-date {
+    width: 7rem;
+}
+input#item-rate, input#item-qty {
+    text-align: center;
+}
+.nowrap { white-space: nowrap; }
+
+#helpDialog ul.tabbar {
+    display: flex;
+    border-bottom: 1px solid #0006;
+    height: 2.1rem;
+    padding-left: 1rem;
+    background: #888;
+}
+#helpDialog .tabbar li {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    background: #ccc;
+    position: relative;
+    height: 1.5rem;
+    top: 0.6rem;
+    min-width: 5rem;
+    text-align: center;
+    border-left: 1px solid #0006;
+    border-top: 1px solid #0006;
+    border-radius: 6px;
+    border-right: 1px solid #0006;
+    cursor: pointer;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #0006;
+    font-size: 0.8rem;
+}
+
+#helpDialog p {
+    margin: 0.5rem;
+}
+
+#helpDialog ul.tabbar li.active {
+    background: #eee;
+    position: relative;
+    z-index: 9999;
+    height: 2.1rem;
+    top: 2px;
+    font-size: 1rem;
+    height: 2rem;
+    top: 5px;
+    border-bottom: 0px;
+}
+
+.githubLink {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.btnpad {
+    display: inline-block;
+    width: 3px;
+    border-right: 1px solid #aaa2;
+    box-shadow: 1px 0px 0px #aaa;
+    height: 2rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+button {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #0003;
+    background: #333;
+    color: #eee;
+}
+#helpDialog button {
+    width: 6rem;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    border: 1px solid #0003;
+}
+
+
+/* external css  */
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-\[535px\] {
+  left: 535px;
+}
+
+.left-\[980px\] {
+  left: 980px;
+}
+
+.top-\[470px\] {
+  top: 470px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-2\/4 {
+  width: 50%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[12\%\] {
+  width: 12%;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[5\%\] {
+  width: 5%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[8\%\] {
+  width: 8%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
+.border-red-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
+}
+
+.p-20 {
+  padding: 5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-56 {
+  padding-left: 14rem;
+  padding-right: 14rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
