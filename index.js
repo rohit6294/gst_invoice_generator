@@ -1,5 +1,5 @@
 
-    function ConvertNumberToWords(number) {
+function ConvertNumberToWords(number) {
     var words = new Array();
     words[0] = '';
     words[1] = 'One';
@@ -40,10 +40,10 @@
         for (var i = 0; i < n_length; i++) {
             received_n_array[i] = number.substr(i, 1);
         }
-        for (var i = 9 - n_length, j = 0; i < 9; i++ , j++) {
+        for (var i = 9 - n_length, j = 0; i < 9; i++, j++) {
             n_array[i] = received_n_array[j];
         }
-        for (var i = 0, j = 1; i < 9; i++ , j++) {
+        for (var i = 0, j = 1; i < 9; i++, j++) {
             if (i == 0 || i == 2 || i == 4 || i == 7) {
                 if (n_array[i] == 1) {
                     n_array[j] = 10 + parseInt(n_array[j]);
@@ -81,14 +81,16 @@
     return words_string;
 }
 
-function printInvoice() {
+function printInvoice(e) {
     document.body.classList.add("print");
-    let el = document.getElementById("main_formm"); // Change the id to 'form_main'
-    el.classList.remove("hidden"); // Ensure the 'form_main' section is not hidden
+    let el = document.getElementById("main_formm");
+    el.classList.remove("hidden");
     html2pdf(el, {
-        filename: 'sb.pdf'
+        filename:'MS#'+ e + '.pdf'
     });
 }
+
+
 
 
 
@@ -103,16 +105,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const sample_form = document.getElementById('sample_form');
         sample_form.classList.add("hidden");
-        const date_input=document.getElementById('date_input').value;
-        const date_output=document.getElementById('date_output');
-        date_output.textContent=`${date_input}`;
+        const date_input = document.getElementById('date_input').value;
+        const date_output = document.getElementById('date_output');
+        date_output.textContent = `${date_input}`;
 
         const val = document.getElementById('gstinput');
         const half_gst = document.querySelectorAll(".gst");
         const mainval = parseFloat(val.value);
         const without_gst = parseFloat((mainval / 1.05).toFixed(2));
         const gst = parseFloat((mainval - without_gst).toFixed(2)) / 2;
-        const full_value=parseFloat(2*gst+without_gst).toFixed(2) ;
+        const full_value = parseFloat(2 * gst + without_gst).toFixed(2);
 
         const basic_value = document.querySelectorAll('.basic_value');
         basic_value.forEach(function (e) {
@@ -125,23 +127,26 @@ document.addEventListener("DOMContentLoaded", function () {
         const main_with_gst_value = document.getElementById('main_with_gst_value');
         main_with_gst_value.textContent = `${full_value}`;
 
-        const rounded=document.getElementById('rounded');
-        const rounded_value=(mainval-full_value).toFixed(2);
-        rounded.textContent=`${rounded_value}`;
+        const rounded = document.getElementById('rounded');
+        const rounded_value = (mainval - full_value).toFixed(2);
+        rounded.textContent = `${rounded_value}`;
 
-        const car_details_input=document.getElementById('car_details_input').value;
-        const car_details=document.getElementById('car_details');
-        car_details.textContent=`${car_details_input.toUpperCase()}`;
-        const color_input=document.getElementById('color_input').value;
-        const color=document.getElementById('color');
-        color.textContent=`${color_input.toUpperCase()} COLOR`;
-        const ch_input=document.getElementById('ch_input').value;
-        const ch_output=document.getElementById('ch_output');
-        ch_output.textContent=`${ch_input.toUpperCase()}`;
+        const car_details_input = document.getElementById('car_details_input').value;
+        const car_details = document.getElementById('car_details');
+        car_details.textContent = `${car_details_input.toUpperCase()}`;
+        const color_input = document.getElementById('color_input').value;
+        const color = document.getElementById('color');
+        color.textContent = `${color_input.toUpperCase()} COLOR`;
+        const ch_input = document.getElementById('ch_input').value;
+        const ch_output = document.getElementById('ch_output');
+        ch_output.textContent = `${ch_input.toUpperCase()}`;
+        const quantity_input = document.getElementById('quantity_input').value;
+        const quantity_output = document.getElementById('quantity_output')
+        quantity_output.textContent = `${quantity_input} NOS`;
 
-        const word=ConvertNumberToWords(mainval);
-        const amount_word=document.getElementById('amount_word');
-        amount_word.textContent=`${word.toUpperCase()} ONLY.`;
+        const word = ConvertNumberToWords(mainval);
+        const amount_word = document.getElementById('amount_word');
+        amount_word.textContent = `${word.toUpperCase()} ONLY.`;
 
 
 
@@ -151,23 +156,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const spanBillerName = document.getElementById('biller_name');
         spanBillerName.textContent = `${biller_name_value.toUpperCase()}`;
 
-        const city_name_input_val=document.getElementById('city').value;
-        const PS_input_val=document.getElementById('P.S').value;
-        const PO_input_val=document.getElementById('P.O').value;
-        const dist_input_val=document.getElementById('dist').value;
-        const pincode_input_val=document.getElementById('pincode').value;
-        const invoice_input_val=document.getElementById('invoice').value;
+        const city_name_input_val = document.getElementById('city').value;
+        const PS_input_val = document.getElementById('P.S').value;
+        const PO_input_val = document.getElementById('P.O').value;
+        const dist_input_val = document.getElementById('dist').value;
+        const pincode_input_val = document.getElementById('pincode').value;
+        const invoice_input_val = document.getElementById('invoice').value;
 
 
-        const city_output=document.getElementById('city_output');
-        city_output.textContent=`${city_name_input_val.toUpperCase()} , ${PS_input_val.toUpperCase()} ,${PO_input_val.toUpperCase()}`;
-        const dist_output=document.getElementById('dist_output');
-        dist_output.textContent=`${dist_input_val.toUpperCase()} , WEST BENGAL`;
-        const pincode_output=document.getElementById('pincode_output');
-        pincode_output.textContent=`${pincode_input_val}`;
-        const invoice_bill=document.getElementById('invoice_bill');
-        invoice_bill.textContent=`${invoice_input_val}`;
-        const gst_name_input=document.getElementById('gst_name_input');
-        
+        const city_output = document.getElementById('city_output');
+        city_output.textContent = `${city_name_input_val.toUpperCase()} , ${PS_input_val.toUpperCase()} ,${PO_input_val.toUpperCase()}`;
+        const dist_output = document.getElementById('dist_output');
+        dist_output.textContent = `${dist_input_val.toUpperCase()} , WEST BENGAL`;
+        const pincode_output = document.getElementById('pincode_output');
+        pincode_output.textContent = `${pincode_input_val}`;
+        const invoice_bill = document.getElementById('invoice_bill');
+        invoice_bill.textContent = `${invoice_input_val}`;
+        const gst_name_input = document.getElementById('gst_name_input').value;
+        const gst_output=document.getElementById('gstname');
+        gst_output.textContent=`${gst_name_input.toUpperCase()}`;
+        const print = document.getElementById('printBtn');
+        print.addEventListener('click', function () {
+            printInvoice(invoice_input_val);
+        });
     });
 });
