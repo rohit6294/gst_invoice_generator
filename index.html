@@ -22,55 +22,60 @@
 
 <body>
     <section class="mb-5" id="sample_form">
-        <input type="date" id="date_input" name="date">
+        
+        <input type="date" id="date_input" name="date" >
         <br>
-        <input type="number" placeholder="Enter the invoice number" id="invoice"
+        <input type="number"  placeholder="Enter the invoice number" id="invoice"
             class="border  border-gray-400 rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="number" name="gstinput" id="gstinput" placeholder="Enter the main value"
+        <input type="number" name="gstinput" id="gstinput"  placeholder="Enter the main value"
             class="border  border-gray-400 rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="text" id="biller_name_input" placeholder="Enter the biller name"
+        <input type="text" id="biller_name_input"  placeholder="Enter the biller name"
             class="border  border-gray-400 rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="text" id="gst_name_input" placeholder="Enter GSTIN"
+        <input type="text" id="gst_name_input"  placeholder="Enter GSTIN"
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="text" id="city" placeholder="Enter the city"
+        <input type="text" id="city" placeholder="Enter the city" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="text" id="P.S" placeholder="Enter the P.S"
+        <input type="text" id="P.S" placeholder="Enter the P.S" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
 
-        <input type="text" id="P.O" placeholder="Enter the P.O"
+        <input type="text" id="P.O" placeholder="Enter the P.O" 
             class="border border-gray-400 rounded  py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="text" id="dist" placeholder="Enter the district"
+        <input type="text" id="dist" placeholder="Enter the district" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus:border-blue-500">
         <br>
-        <input type="number" id="pincode" placeholder="Enter the pincode"
+        <input type="number" id="pincode" placeholder="Enter the pincode" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus-border-blue-500">
         <br>
-        <input type="text" id="car_details_input" placeholder="Enter E-rickshaw name"
+        <input type="text" id="car_details_input" placeholder="Enter E-rickshaw name" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus-border-blue-500">
         <br>
-        <input type="text" id="color_input" placeholder="Enter E-rickshaw color"
+        <input type="number" id="quantity_input" placeholder="Enter quantity" 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus-border-blue-500">
         <br>
-        <input type="text" id="ch_input" style="width: 250px;" placeholder="Enter E-rickshaw chassis no."
+        <input type="text" id="color_input" placeholder="Enter E-rickshaw color" 
+            class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus-border-blue-500">
+        <br>
+        <input type="text" id="ch_input" style="width: 250px;" placeholder="Enter E-rickshaw chassis no." 
             class="border border-gray-400  rounded py-2 px-4 mb-2 focus:outline-none focus-border-blue-500">
         <br>
 
-        <button id="but" style="width: 90px;"
+        <button id="but" type="submit" style="width: 90px;"
             class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+        
     </section>
     <section class="hidden" id="form_main">
 
         <nav>
             <div class='toolbar'>
                 <span class='btngroup'><button id='printBtn' class='btn' title="Print Invoice"
-                        onclick="printInvoice()"></button>Print</span>
+                        ></button>Print</span>
 
             </div>
 
@@ -85,12 +90,12 @@
             </div>
             <header style="padding-top: 32px; padding-bottom: 32px; width: 100%;">
                 <div class="address" style="width: 50%;">
-                    From:
+                    Seller:
                     <br><br>
                     <div>
                         <label id="owner-name"> &emsp;&emsp;M S ENTERPRISE</label><br>
                         <span id="owner-address">&emsp;&emsp;12/5 CHOWBAGA ROAD,KOLKATA-700039<br>&emsp;&emsp;BRANCH- NISCHINTAPUR SOUTH24 PGNS-
-                            &emsp;&emsp;743347</span><br>
+                            &emsp;&emsp; 743347</span><br>
                         <span id="owner-city">&emsp;&emsp;GSTIN/UIN : 19AREPB1784D1Z1</span><br>
                         <span>&emsp;&emsp;STATE NAME : WEST BBENGAL</span> <br>
                         <span>&emsp;&emsp;Sate Code : 19</span>
@@ -125,18 +130,18 @@
                     <tr>
                         <td class="sl">1</td>
                         <td>
-                            <b><span ><span id="car_details"></span><br>E-RICKSHAW</span>
+                            <b><span >&emsp;&emsp;&emsp;&emsp;<span id="car_details"></span><br>&emsp;&emsp;&emsp;&emsp;E-RICKSHAW</span>
                                 <br>
-                                <span id="color">Color</span>
+                               <span>&emsp;&emsp;&emsp;&emsp;<span id="color">Color</span></span>
                                 <br>
-                                <span>C/H NO:- <span  id="ch_output"></span></span></b>
+                                <span>&emsp;&emsp;&emsp;&emsp;C/H NO:- <span  id="ch_output"></span></span></b>
                             <br><br><br>
                         </td>
                         <td class="sl">
 
                         </td>
                         <td class="sl">
-                            <b>1 NOS</b>
+                            <b><span id="quantity_output">1 NOS</span></b>
                         </td>
                         <td class="sl ">
                             <span class="basic_value">100000</span>
