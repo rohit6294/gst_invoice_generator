@@ -1,4 +1,7 @@
 # tax_invoice_generator
+Preview:-
+https://rohit6294.github.io/gst_invoice_generator/
+
 
 Invoice Generator Website 
 Welcome to the Invoice Generator Website project. This project is designed to create a simple yet efficient web application that allows users to input customer information, including name, address, purchase quantity, and amount. Upon submission, the application generates a tax invoice which can then be printed or saved as a PDF directly from the browser. The PDF file will be automatically named based on the invoice number provided during the invoice generation process.
@@ -33,14 +36,9 @@ Open the index.html File
 
 Open the index.html file in your preferred web browser to launch the application.
 
-Contributing
-Contributions to improve the Invoice Generator Website are welcome. Here's how you can contribute:
 
-Fork the project.
-Create a new branch (git checkout -b feature/fooBar).
-Make your changes and commit them (git commit -am 'Add some fooBar').
-Push to the branch (git push origin feature/fooBar).
-Create a new Pull Request.
+
+
 License
 This project is open-source and available under the MIT License.
 
