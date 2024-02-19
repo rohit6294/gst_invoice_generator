@@ -24,9 +24,7 @@ To get started with this project, follow these steps:
 
 Clone the Repository
 
-bash
-Copy code
-git clone https://github.com/yourusername/invoice-generator-website.git
+
 Navigate to the Project Directory
 
 bash
