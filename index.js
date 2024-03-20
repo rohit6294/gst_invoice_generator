@@ -86,7 +86,7 @@ function printInvoice(e) {
     let el = document.getElementById("main_formm");
     el.classList.remove("hidden");
     html2pdf(el, {
-        filename:'MS#'+ e + '.pdf'
+        filename:'GE#'+ e + '.pdf'
     });
 }
 
